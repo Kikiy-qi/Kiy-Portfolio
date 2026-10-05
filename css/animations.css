@@ -1,0 +1,29 @@
+/* Scroll-triggered reveal (MOTION 2): elements fade up on intersection. 
+   No endless loops. Animation fires once per element. */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity var(--duration-slow) var(--ease-out),
+              transform var(--duration-slow) var(--ease-out);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal--delay-1 { transition-delay: 120ms; }
+.reveal--delay-2 { transition-delay: 240ms; }
+.reveal--delay-3 { transition-delay: 360ms; }
+
+/* Hero scroll line: a gentle downward drift to hint at scrolling.
+   This is the only repeating animation; it is small and guides the user. */
+.hero__scroll-line {
+  animation: scroll-drift 2s var(--ease-in-out) infinite;
+}
+
+@keyframes scroll-drift {
+  0%, 100% { opacity: 0.3; transform: scaleY(1); }
+  50% { opacity: 1; transform: scaleY(1.3); }
+}

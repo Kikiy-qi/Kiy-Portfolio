@@ -1,0 +1,147 @@
+@media (max-width: 900px) {
+  .hero__content {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+    text-align: center;
+  }
+
+  .hero__photo {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .hero__text {
+    align-items: center;
+  }
+
+  .hero__tagline {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .about__container {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .about__image {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .about__text-col {
+    padding-top: 0;
+  }
+
+  .about__bio {
+    max-width: 100%;
+  }
+
+  .skills__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery__masonry {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 180px;
+  }
+
+  .gallery__item--wide {
+    grid-column: span 1;
+  }
+
+  .video-work__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+  }
+
+  .design-work__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact__container {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .contact__right {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 580px) {
+  .nav__links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 280px;
+    height: 100dvh;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--space-xl);
+    padding: var(--space-xl);
+    background: var(--bg);
+    border-left: 1px solid var(--border);
+    transform: translateX(100%);
+    transition: transform var(--duration-normal) var(--ease-out);
+    z-index: 99;
+  }
+
+  .nav__links.is-open {
+    transform: translateX(0);
+  }
+
+  .nav__link {
+    font-size: var(--text-xl);
+    font-family: var(--font-heading);
+  }
+
+  .nav__link::after {
+    display: none;
+  }
+
+  .nav__toggle {
+    display: flex;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 100px;
+    padding-bottom: var(--space-xl);
+  }
+
+  .hero__content {
+    gap: var(--space-md);
+  }
+
+  .hero__photo {
+    max-width: 280px;
+  }
+
+  .hero__scroll-hint {
+    display: none;
+  }
+
+  .nav__logo img {
+    height: 60px;
+  }
+
+  .gallery__masonry {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 150px;
+  }
+
+  .gallery__item--tall {
+    grid-row: span 1;
+  }
+
+  .video-work__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__container {
+    flex-direction: column;
+    gap: var(--space-sm);
+    text-align: center;
+  }
+}
