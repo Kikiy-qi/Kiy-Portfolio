@@ -1,4 +1,4 @@
-var GROQ_API_KEY = "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";
+var GROQ_API_KEY = "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";
 var GROQ_URL = "https://api.groq.com/openai/v1/chat/completions";
 
 var SYSTEM_PROMPT = `Kamu adalah asisten representasi portofolio Mohamad Rifki Aunur Rahman (Kiy).
