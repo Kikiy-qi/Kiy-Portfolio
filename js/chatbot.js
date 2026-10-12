@@ -78,13 +78,12 @@ function initChatbot() {
   function sendMessage(userText) {
     chatMessages.push({ role: "user", content: userText });
 
-    // Keep context clean: preserve system prompt and last 8 messages
     if (chatMessages.length > 9) {
       chatMessages = [chatMessages[0]].concat(chatMessages.slice(-8));
     }
 
     var requestBody = {
-      model: "qwen/qwen3.8-27b",
+      model: "llama-3.3-70b-versatile",
       messages: chatMessages,
       temperature: 0.2,
       max_tokens: 150
